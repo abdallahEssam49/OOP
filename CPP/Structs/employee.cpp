@@ -10,31 +10,31 @@ struct employee {
 
 const int MAX = 10000;
 
-employee emplyees_arr[MAX];
+employee employees_arr[MAX];
 int added = 0;	// Number of employees
 
 void read_employee() {
   cout<<"Enter employee 4 entries: ";
-  cin >> emplyees_arr[added].name >> emplyees_arr[added].age;
-  cin >> emplyees_arr[added].salary >> emplyees_arr[added].gender;
+  cin >> employees_arr[added].name >> employees_arr[added].age;
+  cin >> employees_arr[added].salary >> employees_arr[added].gender;
   added++;
 }
 
 void print_employees() {
   for (int i = 0; i < added; ++i) {
-    employee e = emplyees_arr[i];
+    employee e = employees_arr[i];
     cout << e.name << " has salary " << e.salary << "\n";
   }
 }
 
 int main() {
   employee first = { "mostafa", 10, 1200.5, "Male" };
-  emplyees_arr[added++] = first;
+  employees_arr[added++] = first;
 
-  emplyees_arr[added].name = "hani";
-  emplyees_arr[added].age = 55;
-  emplyees_arr[added].salary = 750;
-  emplyees_arr[added].gender = "Male";
+  employees_arr[added].name = "hani";
+  employees_arr[added].age = 55;
+  employees_arr[added].salary = 750;
+  employees_arr[added].gender = "Male";
   added++;
 
   read_employee();
